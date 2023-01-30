@@ -1,0 +1,43 @@
+.newnavbar {
+  background: #44455313;
+  backdrop-filter: blur(19.5px);
+  -webkit-backdrop-filter: blur(19.5px);
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  transition: 1s all;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.newnav {
+  color: white;
+}
+
+.newnav_active {
+  color: #f1ee06;
+  content: '';
+  border-bottom: 2px solid #f1ee06;
+}
+
+.newnav:hover {
+  color: #f1ee06;
+}
+
+.newnav::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f5f4f4;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.newnav:hover::after {
+  width: 100%;
+  color: #f1ee06;
+}

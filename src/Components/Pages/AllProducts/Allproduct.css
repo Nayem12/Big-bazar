@@ -1,0 +1,6 @@
+producteffect:hover {
+    background-color: #00DBDE;
+    background-image: linear-gradient(93deg, rgb(43, 118, 82) 1.61%, rgb(68, 235, 205) 181.18%);
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgb(68, 235, 205);
+}

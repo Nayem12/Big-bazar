@@ -1,0 +1,156 @@
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import './Login.css'
+import { RiLoginCircleFill } from 'react-icons/ri';
+import { AuthContext } from '../../../AuthContexts/Contexts/AuthProvider';
+import toast from 'react-hot-toast';
+import { useForm } from 'react-hook-form';
+import { FcGoogle } from 'react-icons/fc';
+import { GoMarkGithub } from 'react-icons/go';
+import useVerifyToken from '../../../hooks/useVerifyToken';
+import gif from '../../../Assets/login.gif'
+
+const Login = () => {
+  const { loginUser, googleLogin } = useContext(AuthContext);
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const [loginUserEmail, setLoginUserEmail] = useState('')
+  const [token] = useVerifyToken(loginUserEmail);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+  if (token) {
+    navigate(from, { replace: true });
+  }
+
+
+  const getUserJwtToken = email => {
+    fetch(`http://localhost:5000/getjwt?email=${email}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.accessToken) {
+          localStorage.getItem('accessToken', data.accessToken)
+          navigate(from, { replace: true });
+        }
+      })
+  }
+
+
+
+
+
+  const handleLogin = (data) => {
+    const email = data.email;
+    const password = data.password;
+    loginUser(email, password)
+      .then(result => {
+        const user = result.user;
+        setLoginUserEmail(user?.email);
+        toast.success(`Hi ${user?.displayName}, Welcome to our website !`)
+      })
+      .catch(e => console.log(e))
+  }
+
+
+
+
+
+
+
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(result => {
+        const googleUser = result.user;
+        const newUser = {
+          name: googleUser?.displayName,
+          email: googleUser?.email,
+          photoURL: googleUser?.photoURL,
+          accountType: 'Buyer',
+        }
+        fetch('http://localhost:5000/googlelogin', {
+          method: 'PUT',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(newUser)
+        })
+          .then(res => res.json())
+          .then(result => {
+            setLoginUserEmail(googleUser?.email)
+            toast.success(`Hey ${googleUser?.displayName} Welcome to the Website !  `)
+          })
+      })
+      .catch(e => console.log(e))
+  }
+
+
+
+
+
+
+  return (
+    <div className='bg-gradient-to-r from-[#686562] to-[#444553] mt-[-100px]'>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className='grid  w-11/12 mx-auto md:grid-cols-2 justify-center items-center'>
+
+        {/*  form */}
+        <div className='login-side-image hidden md:block'>
+          <img src="" alt="" />
+        </div>
+
+        <div className=''>
+          <h1 className='text-2xl md:text-3xl text-center text-white uppercase font-bold'>You have to login first...</h1>
+
+          <div className='mt-16 bg-[#01254728] md:p-10 rounded-lg'>
+            <form
+              onSubmit={handleSubmit(handleLogin)}
+              className=' '>
+
+
+              <div className='md:w-3/4 p-3 mx-auto flex flex-col gap-10 '>
+                <input
+                  {...register("email")}
+                  type="email" placeholder='Type Your Email' className='py-2 px-4 rounded-md bg-[#103f6b25]  border-spacing-3 border-b  input:text-white focus:text-white text-slate-400 outline-none focus:border-[#0000000a] focus:bg-[#27526b65] focus:ring-2  focus:ring-green-500/50' />
+
+                <input
+                  {...register("password")}
+                  type="password" placeholder='Type Your Password' className='py-2 px-4 rounded-md bg-[#103f6b25]   border-spacing-3 border-b   input:text-white focus:text-white text-slate-400 outline-none focus:border-[#0000000a] focus:bg-[#27526b65] focus:ring-2  focus:ring-green-500/50' />
+
+                {/*  submit */}
+                <div >
+                  <div className='flex items-center justify-between gap-3'>
+                    <button type="submit" className="flex items-center gap-2 mt-2 py-2 rounded-full text-black text-lg gradiant border-0 px-10">
+                      Login
+                    </button>
+                    <p className='text-slate-400'>Forget Your Possword ? </p>
+                  </div>
+                  <p className='text-slate-400 flex gap-3 ml-2 mt-4 '>New Here ? <Link to='/signup' className='text-blue-500 flex items-center gap-2'>create an Account <RiLoginCircleFill className='text-2xl ' />  </Link></p>s
+                </div>
+              </div>
+            </form>
+
+            <div className='flex flex-col md:flex-row mt-5 pb-5 gap-3 justify-evenly items-center'>
+              <p className='text-xs text-slate-400 '>or signup with ...</p>
+              <button
+                onClick={handleGoogleLogin}
+                className=' px-4 text-white text-sm py-1 border border-[#21a4fc59] rounded-md flex items-center gap-2 googlebg'> <FcGoogle /> Continue With Google</button>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default Login;

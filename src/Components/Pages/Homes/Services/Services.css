@@ -1,0 +1,17 @@
+.services {
+    background-image: linear-gradient(rgba(53, 29, 14, 0.527), rgba(0, 0, 0, 0.5)), url(../../../../Assets/kitchen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    padding: 50px 0;
+    box-shadow: 3px 3px 3px 10px rgb(126, 124, 124);
+}
+
+.hrline {
+    width: 70px;
+    margin: 0 auto;
+    margin-top: 40px;
+    color: white;
+    background-color: white;
+    border-bottom: 4px solid white;
+}
