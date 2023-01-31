@@ -24,7 +24,7 @@ const Login = () => {
 
 
   const getUserJwtToken = email => {
-    fetch(`http://localhost:5000/getjwt?email=${email}`)
+    fetch(`https://big-bazar-server.vercel.app/getjwt?email=${email}`)
       .then(res => res.json())
       .then(data => {
         if (data.accessToken) {
@@ -67,7 +67,7 @@ const Login = () => {
           photoURL: googleUser?.photoURL,
           accountType: 'Buyer',
         }
-        fetch('http://localhost:5000/googlelogin', {
+        fetch('https://big-bazar-server.vercel.app/googlelogin', {
           method: 'PUT',
           headers: {
             'content-type': 'application/json'

@@ -25,7 +25,7 @@ const SignUp = () => {
     navigate('/')
   }
   const getUserJwtToken = email => {
-    fetch(`http://localhost:5000/getjwt?email=${email}`)
+    fetch(`https://big-bazar-server.vercel.app/getjwt?email=${email}`)
       .then(res => res.json())
       .then(data => {
         if (data.accessToken) {
@@ -89,7 +89,7 @@ const SignUp = () => {
               photoURL: photolink,
               accountType,
             }
-            fetch('http://localhost:5000/createuser', {
+            fetch('https://big-bazar-server.vercel.app/createuser', {
               method: 'POST',
               headers: {
                 'content-type': 'application/json'
@@ -127,7 +127,7 @@ const SignUp = () => {
           photoURL: googleUser?.photoURL,
           accountType: 'Buyer',
         }
-        fetch('http://localhost:5000/createuser', {
+        fetch('https://big-bazar-server.vercel.app/createuser', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

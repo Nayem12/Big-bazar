@@ -6,7 +6,7 @@ const Advertise = () => {
 
   const { data: advertiseItems = [], isLoading, refetch } = useQuery({
     queryKey: ['advertiseItems'],
-    queryFn: () => fetch(`http://localhost:5000/advertisedItem`, {
+    queryFn: () => fetch(`https://big-bazar-server.vercel.app/advertisedItem`, {
       headers: {
         'content-type': 'application/json',
         authorization: `bearer ${localStorage.getItem('accessToken')}`

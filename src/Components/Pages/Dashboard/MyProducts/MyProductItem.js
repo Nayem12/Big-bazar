@@ -7,7 +7,7 @@ const MyProductItem = ({ product, setDeleteConfirm }) => {
   const [advertisedItem, setAdvertisedItem] = useState('')
   const { title, price, category, email, availibility, paymentStatus } = product;
   const handleAddToAdvertise = (advertiseitem) => {
-    fetch(`http://localhost:5000/addtoadvertise?id=${advertiseitem._id}`, {
+    fetch(`https://big-bazar-server.vercel.app/addtoadvertise?id=${advertiseitem._id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

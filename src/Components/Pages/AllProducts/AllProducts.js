@@ -6,7 +6,7 @@ import AllProduct from './AllProduct';
 const AllProducts = () => {
     const { data: allproducts = [], isLoading, refetch } = useQuery({
         queryKey: ['allproducts'],
-        queryFn: () => fetch('http://localhost:5000/allproducts')
+        queryFn: () => fetch('https://big-bazar-server.vercel.app/allproducts')
             .then(res => res.json())
     })
     if (isLoading) {

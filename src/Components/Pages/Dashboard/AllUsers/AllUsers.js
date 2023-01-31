@@ -36,7 +36,7 @@ const AllUsers = () => {
 
   const handleDeleteUser = (deleteuser) => {
 
-    fetch(` http://localhost:5000/deleteuser/${deleteuser._id}`, {
+    fetch(` https://big-bazar-server.vercel.app/deleteuser/${deleteuser._id}`, {
       method: 'DELETE',
       headers: {},
     })

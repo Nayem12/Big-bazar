@@ -8,7 +8,7 @@ const AllBuyerItem = ({ buyer, refetch }) => {
 
   const handleDeleteSeller = () => {
 
-    fetch(`http://localhost:5000/deletebuyer/${buyer._id}`, {
+    fetch(`https://big-bazar-server.vercel.app/deletebuyer/${buyer._id}`, {
       method: 'DELETE',
       headers: {}
     })

@@ -36,7 +36,7 @@ const Product = ({ product, refetch }) => {
 
   const handleAddToWishList = () => {
     if (user?.email) {
-      fetch(`http://localhost:5000/addtowishlist`, {
+      fetch(`https://big-bazar-server.vercel.app/addtowishlist`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json'

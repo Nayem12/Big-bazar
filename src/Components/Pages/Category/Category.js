@@ -10,7 +10,7 @@ const Category = () => {
 
   useEffect(() => {
     setDataLoading(true)
-    axios.get('http://localhost:5000/categories')
+    axios.get('https://big-bazar-server.vercel.app/categories')
       .then((res) => {
         setCategories(res?.data)
         setDataLoading(false)

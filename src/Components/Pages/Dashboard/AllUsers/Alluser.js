@@ -11,7 +11,7 @@ const Alluser = ({ refetch, users, setDeleteConfirm }) => {
 
 
   const handleUserVerify = () => {
-    fetch(`http://localhost:5000/setaccounttype/${users?._id}`, {
+    fetch(`https://big-bazar-server.vercel.app/setaccounttype/${users?._id}`, {
       method: 'PATCH',
       headers: {
         'content-type': 'application/json',

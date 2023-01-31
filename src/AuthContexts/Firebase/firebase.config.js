@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAyS12pwHxx-rgUjM2y07zxEpp1FRWjG3E",
-  authDomain: "photography-5c809.firebaseapp.com",
-  projectId: "photography-5c809",
-  storageBucket: "photography-5c809.appspot.com",
-  messagingSenderId: "752129595494",
-  appId: "1:752129595494:web:dffd2ebd29347a61bab5a7"
+  apiKey: "AIzaSyA4gyZPyjM-aSz4BT-N7LB5LRz-uzPyius",
+  authDomain: "evil-shop.firebaseapp.com",
+  projectId: "evil-shop",
+  storageBucket: "evil-shop.appspot.com",
+  messagingSenderId: "978828339376",
+  appId: "1:978828339376:web:0f710077bffd6d753f7375"
 };
 
 // Initialize Firebase

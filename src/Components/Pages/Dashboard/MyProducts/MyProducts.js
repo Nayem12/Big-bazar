@@ -16,7 +16,7 @@ const MyProducts = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/myproducts?email=${user?.email}`)
+      fetch(`https://big-bazar-server.vercel.app/myproducts?email=${user?.email}`)
         .then(res => res.json())
         .then(result => {
           setMyProducts(result)
@@ -42,7 +42,7 @@ const MyProducts = () => {
 
   const handleDeleteProduct = (deleteConfirm) => {
 
-    fetch(`http://localhost:5000/deletemyproduct/${deleteConfirm._id}`, {
+    fetch(`https://big-bazar-server.vercel.app/deletemyproduct/${deleteConfirm._id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
@@ -55,7 +55,7 @@ const MyProducts = () => {
         setReload(true)
         // fetch
         if (data?.acknowledged) {
-          fetch(`http://localhost:5000/deleteadvertiseproduct/${user?.email}`, {
+          fetch(`https://big-bazar-server.vercel.app/deleteadvertiseproduct/${user?.email}`, {
             method: 'DELETE',
             headers: {
               'content-type': 'application/json'

@@ -32,7 +32,7 @@ const BookingModal = ({ product, setModalitems, handleBookItem }) => {
       productId: _id,
     }
 
-    fetch('http://localhost:5000/bookItem', {
+    fetch('https://big-bazar-server.vercel.app/bookItem', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

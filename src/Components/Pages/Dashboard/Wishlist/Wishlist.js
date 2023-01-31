@@ -14,7 +14,7 @@ const Wishlist = () => {
   useEffect(() => {
     setDataLoading(true)
     if (user?.email) {
-      fetch(`http://localhost:5000/wishlistitems/${user?.email}`)
+      fetch(`https://big-bazar-server.vercel.app/wishlistitems/${user?.email}`)
         .then(res => res.json())
         .then(data => {
           setDataLoading(false)
@@ -26,7 +26,7 @@ const Wishlist = () => {
 
   const handleDeleteWishlit = () => {
     setDataLoading(true)
-    fetch(`http://localhost:5000/deletewishlist/${deleteConfirm._id}`, {
+    fetch(`https://big-bazar-server.vercel.app/deletewishlist/${deleteConfirm._id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

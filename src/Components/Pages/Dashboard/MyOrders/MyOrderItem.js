@@ -22,7 +22,7 @@ const MyOrderItem = ({ myorder, setLoading }) => {
   console.log('inside my orderitem', myorder);
 
   const handleDeleteOrder = () => {
-    fetch(`http://localhost:5000/deleteorder/${myorder._id}`, {
+    fetch(`https://big-bazar-server.vercel.app/deleteorder/${myorder._id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'

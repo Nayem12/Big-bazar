@@ -54,7 +54,7 @@ const AddProduct = () => {
                 color: data?.color,
               }
 
-              fetch('http://localhost:5000/addproducts', {
+              fetch('https://big-bazar-server.vercel.app/addproducts', {
                 method: 'POST',
                 headers: {
                   'content-type': 'application/json'
@@ -76,7 +76,7 @@ const AddProduct = () => {
 
   const { data: categories = [], isLoading } = useQuery({
     queryKey: ['categories'],
-    queryFn: () => fetch('http://localhost:5000/categories')
+    queryFn: () => fetch('https://big-bazar-server.vercel.app/categories')
       .then(res => res.json())
   })
 

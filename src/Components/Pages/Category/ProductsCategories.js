@@ -8,15 +8,15 @@ const ProductsCategories = ({ category, stickyTopSpace }) => {
   return (
     <>
       <div
-        className={`sticky grid grid-cols-1 overflow-hidden rounded-xl bg-gray-600 shadow-[0px_0px_30px_-10px_rgba(0,0,0,0.1)] md:grid-cols-2`}
+        className={`sticky grid grid-cols-1 overflow-hidden rounded-xl bg-gradient-to-r from-[#44e6a7] to-[#28493d] shadow-[0px_0px_30px_-10px_rgba(0,0,0,0.1)] md:grid-cols-2`}
         style={{ top: stickyTopSpace }}>
         <div className="flex flex-col justify-center p-10">
           <div className="space-y-4">
             <h2 className="font-serif text-5xl -mb-2 text-white">{categoryName}</h2>
             <p className="lg:w-3/4 text-lg text-white">{description}</p>
             <Link to={`/category/${_id}`} className="flex justify-center">
-              <button type="submit" className=" flex items-center gap-2 mt-2 py-2 rounded-full text-black text-lg gradiant border-0 px-10">
-                <span>See Items</span> <FaArrowRight />
+              <button type="submit" className=" flex items-center gap-2 mt-2 py-2 rounded-full text-black text-lg bg-gradient-to-r from-[#d62b2b] to-[#a89e9e] border-0 px-10 hover:from-[#a89e9e] hover:to-[#d62b2b]">
+                <span className='text-white'>See Items</span> <FaArrowRight />
               </button>
             </Link>
           </div>

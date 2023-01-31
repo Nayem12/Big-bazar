@@ -14,7 +14,7 @@ const MyOrders = () => {
     const accessToken = localStorage.getItem('accessToken');
     if (user?.email && accessToken) {
 
-      fetch(`http://localhost:5000/myorders?email=${user?.email}`, {
+      fetch(`https://big-bazar-server.vercel.app/myorders?email=${user?.email}`, {
         headers: {
           authorization: `bearer ${accessToken}`
         }

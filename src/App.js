@@ -2,8 +2,7 @@ import Aos from 'aos'
 import React, { useEffect } from 'react'
 import { RouterProvider } from 'react-router-dom'
 import router from './Routes/Router'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+
 import 'aos/dist/aos.css'
 // import { RouterProvider } from 'react-router-dom'
 // import router from './Routes/Router'
