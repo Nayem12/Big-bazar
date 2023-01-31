@@ -16,7 +16,7 @@ const AllUsers = () => {
 
   const { data: allusers = [], isLoading, refetch } = useQuery({
     queryKey: ['allusers'],
-    queryFn: () => fetch('http://localhost:5000/allusers', {
+    queryFn: () => fetch('https://big-bazar-server.vercel.app/allusers', {
       headers: {
         authorization: `bearer ${localStorage.getItem('accessToken')}`
       }
