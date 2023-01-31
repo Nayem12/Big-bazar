@@ -86,3 +86,96 @@ Before we get started, keep in mind:
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 [error] 
 [error] Error: Failed to get Firebase project evil-shop-5b341. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-01-31T13:16:30.401Z] ----------------------------------------------------------------------
+[debug] [2023-01-31T13:16:30.404Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\shana\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-01-31T13:16:30.404Z] CLI Version:   11.16.1
+[debug] [2023-01-31T13:16:30.405Z] Platform:      win32
+[debug] [2023-01-31T13:16:30.405Z] Node Version:  v18.12.1
+[debug] [2023-01-31T13:16:30.406Z] Time:          Tue Jan 31 2023 19:16:30 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-01-31T13:16:30.407Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-31T13:16:30.554Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-31T13:16:30.555Z] > authorizing via signed-in user (shanaeem773@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\website\Big-bazar
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-01-31T13:16:44.670Z] Using project from CLI flag: evil-shop-5b341
+[debug] [2023-01-31T13:16:44.673Z] > refreshing access token with scopes: []
+[debug] [2023-01-31T13:16:44.677Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-01-31T13:16:44.677Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-31T13:16:45.244Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-01-31T13:16:45.244Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-01-31T13:16:45.252Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/evil-shop-5b341 [none]
+[debug] [2023-01-31T13:16:45.965Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/evil-shop-5b341 403
+[debug] [2023-01-31T13:16:45.966Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/evil-shop-5b341 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-01-31T13:16:45.966Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-01-31T13:16:46.311Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\shana\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\shana\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project evil-shop-5b341. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-01-31T13:19:16.399Z] ----------------------------------------------------------------------
+[debug] [2023-01-31T13:19:16.402Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\shana\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-01-31T13:19:16.403Z] CLI Version:   11.16.1
+[debug] [2023-01-31T13:19:16.403Z] Platform:      win32
+[debug] [2023-01-31T13:19:16.403Z] Node Version:  v18.12.1
+[debug] [2023-01-31T13:19:16.404Z] Time:          Tue Jan 31 2023 19:19:16 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-01-31T13:19:16.405Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-31T13:19:16.524Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-31T13:19:16.525Z] > authorizing via signed-in user (shanaeem773@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\website\Big-bazar
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-01-31T13:19:23.143Z] Using project from CLI flag: evil-shop-5b341
+[debug] [2023-01-31T13:19:23.146Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/evil-shop-5b341 [none]
+[debug] [2023-01-31T13:19:24.750Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/evil-shop-5b341 403
+[debug] [2023-01-31T13:19:24.751Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/evil-shop-5b341 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-01-31T13:19:24.753Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-01-31T13:19:25.630Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\shana\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\shana\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project evil-shop-5b341. Please make sure the project exists and your account has permission to access it.
