@@ -27,7 +27,7 @@ const Banner = () => {
         </div>
 
       </div>
-      <div className="flex w-[45%] text-white mt-5 effect">
+      <div className="flex w-[45%] text-white mt-5 effect md:hidden sm:hidden hidden">
 
         <div className="stat">
           <div className="stat-figure text-secondary">

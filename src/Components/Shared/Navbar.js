@@ -31,7 +31,10 @@ const Navbar = () => {
       <NavLink to='/' className={({ isActive }) => isActive ? 'newnav_active' : 'p-1 mr-3 font-medium'}>Home</NavLink>
     </li>
     <li>
-      <NavLink to='/blog' className={({ isActive }) => isActive ? 'newnav_active' : 'p-1 mr-3 font-medium'}>Blog</NavLink>
+      <NavLink to='/blogs' className={({ isActive }) => isActive ? 'newnav_active' : 'p-1 mr-3 font-medium'}>Blog</NavLink>
+    </li>
+    <li>
+      <NavLink to='/Products' className={({ isActive }) => isActive ? 'newnav_active' : 'p-1 mr-3 font-medium'}>Products</NavLink>
     </li>
     {
       user?.email ?
@@ -64,7 +67,7 @@ const Navbar = () => {
               <NavLink to='/' className={({ isActive }) => isActive ? 'newnav_active' : 'newnav'}>Home</NavLink>
             </li>
             <li>
-              <NavLink to='/blog' className={({ isActive }) => isActive ? 'newnav_active' : 'newnav'}>Blog</NavLink>
+              <NavLink to='/blogs' className={({ isActive }) => isActive ? 'newnav_active' : 'newnav'}>Blog</NavLink>
             </li>
             <li>
               <NavLink to='/products' className={({ isActive }) => isActive ? 'newnav_active' : 'newnav'}>Products</NavLink>

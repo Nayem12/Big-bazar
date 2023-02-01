@@ -129,6 +129,17 @@
     gap: 1rem;
 }
 
+@media(max-width:700px) {
+    .left-r {
+        display: none;
+    }
+
+    .right-r {
+        text-transform: uppercase;
+
+    }
+}
+
 .item1 {
     width: 30rem;
     grid-row: 1/3;

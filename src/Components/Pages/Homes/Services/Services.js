@@ -51,7 +51,7 @@ const Services = () => {
         <div className='mt-[50px] services'>
             <h2 className="text-5xl font-bold text-center text-white">Our services</h2>
             <div className='hrline'></div>
-            <div className='grid grid-cols-3 w-[85%] mx-auto gap-2 mt-5'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 w-[85%] mx-auto gap-2 mt-5'>
                 {
                     servicesData.map(service => <Service
                         key={service.next}

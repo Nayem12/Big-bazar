@@ -17,11 +17,26 @@ const Slider = () => {
             <Swiper
                 modules={[Navigation, Autoplay]}
                 spaceBetween={30}
-                slidesPerView={4}
+                // slidesPerView={4}
                 // onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 navigation
                 autoplay={{ delay: 4000 }}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    }
+                }
+                }
             >
                 {
                     allproducts.map(allproduct => <SwiperSlide>

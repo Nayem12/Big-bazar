@@ -10,7 +10,7 @@ const ChooseUs = () => {
             <div className='w-[95%] mx-auto'>
                 <div className='Reasons' id='reasons'>
 
-                    <div className='left-r' data-aos="fade-up" data-aos-duration="1000">
+                    <div className='left-r'>
                         <img className='item1' src={sofa1} alt="" />
                         <img className='item2' src={chair} alt="" />
                         <img className='item3' src={table} alt="" />
